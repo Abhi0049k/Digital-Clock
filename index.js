@@ -5,10 +5,12 @@ function updateClock(){
     let h = new Date().getHours();
     let m = new Date().getMinutes();
     let s = new Date().getSeconds();
-    let ampm = "AM";
+    let ampm = document.getElementById("ampm");
     if(h>12){
         h=h-12;
-        ampm = "PM";
+        ampm.innerHTML = "PM";
+    }else{
+        ampm.innerHTML = "AM";
     }
     h=h<10?"0"+h: h;
     m=m<10?"0"+m: m;
